@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barrio Privado Sausalito - Mapa</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #3498db;
+            --light-color: #ecf0f1;
+            --dark-color: #2c3e50;
+            --success-color: #27ae60;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+        body {
+            background-color: var(--light-color);
+            color: var(--dark-color);
+            line-height: 1.6;
+        }
+        
+        .navbar {
+            background-color: var(--primary-color);
+            padding: 1rem 2rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .navbar-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .logo {
+            color: white;
+            font-size: 1.5rem;
+            font-weight: 700;
+            text-decoration: none;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 1.5rem;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-links a:hover {
+            color: var(--accent-color);
+        }
+        
+        .active {
+            color: var(--accent-color) !important;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 6rem auto 2rem;
+            padding: 0 2rem;
+        }
+        
+        .page-title {
+            margin-bottom: 2rem;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+        
+        .page-title::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            height: 3px;
+            width: 100px;
+            background-color: var(--accent-color);
+        }
+        
+        .map-container {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            overflow: hidden;
+            margin-bottom: 2rem;
+        }
+        
+        .map-header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 1rem 1.5rem;
+        }
+        
+        .map-image {
+            padding: 1.5rem;
+            text-align: center;
+        }
+        
+        .map-image img {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        
+        .map-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1.5rem;
+            padding: 0 1.5rem 1.5rem;
+        }
+        
+        .feature {
+            display: flex;
+            align-items: center;
+            padding: 1rem;
+            background-color: #f8f9fa;
+            border-radius: 4px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+        
+        .feature i {
+            font-size: 1.5rem;
+            color: var(--accent-color);
+            margin-right: 1rem;
+        }
+        
+        .feature-text h3 {
+            font-size: 1rem;
+            margin-bottom: 0.25rem;
+        }
+        
+        .feature-text p {
+            font-size: 0.9rem;
+            color: #6c757d;
+        }
+        
+        .legend {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .legend h2 {
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+        
+        .legend-items {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+        
+        .legend-item {
+            display: flex;
+            align-items: center;
+        }
+        
+        .legend-color {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            margin-right: 0.5rem;
+        }
+        
+        .color-1 { background-color: #3498db; }
+        .color-2 { background-color: #2ecc71; }
+        .color-3 { background-color: #f1c40f; }
+        .color-4 { background-color: #e74c3c; }
+        .color-5 { background-color: #9b59b6; }
+        
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            margin: 1rem 0;
+        }
+        
+        .footer-links li {
+            margin: 0 1rem;
+        }
+        
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+        }
+        
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .map-features {
+                grid-template-columns: 1fr;
+            }
+            
+            .container {
+                margin-top: 5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-content">
+            <a href="#" class="logo">Barrio Privado Sausalito</a>
+            <ul class="nav-links">
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Nosotros</a></li>
+                <li><a href="#">Amenidades</a></li>
+                <li><a href="#" class="active">Mapa</a></li>
+                <li><a href="#">Lotes</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <div class="container">
+        <h1 class="page-title">Mapa del Barrio</h1>
+        
+        <div class="map-container">
+            <div class="map-header">
+                <h2>Vista General del Barrio Privado Sausalito</h2>
+            </div>
+            <div class="map-image">
+                <img src="./assets/img/mapa-sausalito.webp" alt="Mapa del Barrio Privado Sausalito">
+            </div>
+            <div class="map-features">
+                <div class="feature">
+                    <div class="feature-text">
+                        <h3>43 Hectáreas</h3>
+                        <p>Extensión total del predio</p>
+                    </div>
+                </div>
+                <div class="feature">
+                    <div class="feature-text">
+                        <h3>180 Lotes</h3>
+                        <p>Desde 800 hasta 1200 m²</p>
+                    </div>
+                </div>
+                <div class="feature">
+                    <div class="feature-text">
+                        <h3>35% Áreas Verdes</h3>
+                        <p>Espacios comunes y recreativos</p>
+                    </div>
+                </div>
+                <div class="feature">
+                    <div class="feature-text">
+                        <h3>Seguridad 24/7</h3>
+                        <p>Acceso controlado y vigilancia</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="legend">
+            <h2>Referencias del Mapa</h2>
+            <div class="legend-items">
+                <div class="legend-item">
+                    <div class="legend-color color-1"></div>
+                    <span>Lotes Residenciales</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color color-2"></div>
+                    <span>Áreas Verdes</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color color-3"></div>
+                    <span>Amenidades</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color color-4"></div>
+                    <span>Accesos</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color color-5"></div>
+                    <span>Lago Artificial</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="map-container">
+            <div class="map-header">
+                <h2>Puntos de Interés</h2>
+            </div>
+            <div class="map-features">
+                <div class="feature">
+                    <div class="feature-text">
+                        <h3>Club House</h3>
+                        <p>Salón de usos múltiples, gimnasio y piscina</p>
+                    </div>
+                </div>
+                <div class="feature">
+                    <div class="feature-text">
+                        <h3>Canchas Deportivas</h3>
+                        <p>Tenis, pádel y fútbol</p>
+                    </div>
+                </div>
+                <div class="feature">
+                    <div class="feature-text">
+                        <h3>Parque Central</h3>
+                        <p>Juegos infantiles y áreas de picnic</p>
+                    </div>
+                </div>
+                <div class="feature">
+                    <div class="feature-text">
+                        <h3>Senderos</h3>
+                        <p>Circuitos para caminatas y bicicletas</p>
+                    </div>
+                </div>
+                <div class="feature">
+                    <div class="feature-text">
+                        <h3>Acceso Principal</h3>
+                        <p>Control de seguridad y recepción</p>
+                    </div>
+                </div>
+                <div class="feature">
+                    <div class="feature-text">
+                        <h3>Lago Artificial</h3>
+                        <p>Área de recreación y paisajismo</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 Barrio Privado Sausalito - Todos los derechos reservados</p>
+            <ul class="footer-links">
+                <li><a href="#">Política de Privacidad</a></li>
+                <li><a href="#">Términos y Condiciones</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>

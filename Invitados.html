@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/invitados.css">
+    <title>REGISTRO DE INVITADOS | BARRIO GESTION</title>
+</head>
+<body>
+    <h1 class="Barrio">BARRIO GESTION</h1><BR><BR>
+    
+    <h2>REGISTRO DE INVITADOS</h2>
+    
+    <p>Este apartado describe el sistema de control de acceso para los invitados del barrio privado. Se detallan los procedimientos para el registro, autorización y verificación de identidad, asegurando un ingreso seguro y controlado.</p>
+    
+    <div class="form-container">
+        <form action="listaInvitados.html" method="get">
+            <label for="nombre">NOMBRE:</label>
+            <input type="text" id="nombre" name="nombre" required>
+            
+            <label for="apellido">APELLIDO:</label>
+            <input type="text" id="apellido" name="apellido" required>
+            
+            <label for="dni">DNI:</label>
+            <input type="text" id="dni" name="dni" required>
+            
+            <label for="email">EMAIL:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="horario">HORARIO:</label>
+            <input type="datetime-local" id="horario" name="horario" required>
+            
+            <label for="foto">FOTO:</label>
+            <input type="file" id="foto" name="foto" accept="image/*">
+            
+            <label for="placa">PLACA DEL VEHÍCULO:</label>
+            <input type="text" id="placa" name="placa">
+            
+            <label for="motivo">MOTIVO:</label>
+            <select id="motivo" name="motivo">
+                <option value="">-- Seleccionar --</option>
+                <option value="personal">Personal</option>
+                <option value="trabajo">Trabajo</option>
+                <option value="evento">Evento</option>
+                <option value="otro">Otro</option>
+            </select>
+            
+            <label for="dueno">DUEÑO DE LA CASA:</label>
+            <input type="text" id="dueno" name="dueno" required>
+            
+            <label for="lote">NRO DE LOTE:</label>
+            <input type="text" id="lote" name="lote" required>
+            
+            <button type="submit">REGISTRAR INVITADO</button>
+        </form>
+    </div>
+</body>
+</html>

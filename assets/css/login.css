@@ -1,0 +1,258 @@
+/* Estilos específicos para la página de login */
+.login-container {
+    display: flex;
+    height: 100vh;
+    background-color: #000000;
+}
+
+.login-image {
+    flex: 1;
+    background: url('../img/las-casuarinas-5-10976019-1585.png') no-repeat center center/cover;
+    display: none;
+}
+
+.login-form-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    background-color: #000000;
+}
+
+.login-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.login-logo {
+    max-height: 80px;
+    margin-bottom: 1rem;
+}
+
+.login-title {
+    color: #ffffff;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.login-subtitle {
+    color: #cfcfcf;
+    font-size: 1rem;
+}
+
+.login-form {
+    width: 100%;
+    max-width: 400px;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #ffffff;
+    font-weight: 500;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 15px 15px 15px 40px;
+    border: 1px solid #bdc3c7;
+    border-radius: 10px;
+    font-size: 1rem;
+    background-color: #f8f8f8;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input:focus {
+    border-color: #f39c12;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(243, 156, 18, 0.2);
+}
+
+.form-group i {
+    position: absolute;
+    left: 15px;
+    top: 43px;
+    color: #ffffff;
+}
+
+.remember-forgot {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+}
+
+.remember-me {
+    display: flex;
+    align-items: center;
+}
+
+.remember-me input {
+    margin-right: 0.5rem;
+    color: white;
+}
+
+.forgot-password {
+    color: #3498db;
+    transition: color 0.3s ease;
+}
+
+.forgot-password:hover {
+    color: #2980b9;
+}
+
+.login-btn {
+    width: 100%;
+    padding: 15px;
+    background-color: #f39c12;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.login-btn:hover {
+    background-color: #e67e22;
+    transform: translateY(-3px);
+}
+
+.login-divider {
+    display: flex;
+    align-items: center;
+    margin: 1.5rem 0;
+    color: #ffffff;
+}
+
+.login-divider::before,
+.login-divider::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background-color: #bdc3c7;
+}
+
+.login-divider span {
+    padding: 0 1rem;
+}
+
+.social-login {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.social-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    color: #7f8c8d;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.social-btn:hover {
+    transform: translateY(-3px);
+}
+
+.social-btn.google:hover {
+    background-color: #DB4437;
+    color: white;
+}
+
+.social-btn.facebook:hover {
+    background-color: #1877F2;
+    color: white;
+}
+
+.social-btn.apple:hover {
+    background-color: #000000;
+    color: white;
+}
+
+.register-link {
+    text-align: center;
+    margin-top: 1.5rem;
+    color: #ffffff;
+}
+
+.register-link a {
+    color: #3498db;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.register-link a:hover {
+    color: #2980b9;
+}
+
+.back-to-home {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: #ffffff;
+    text-shadow: 1px 1px 1px black;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.back-to-home:hover {
+    color: #f39c12;
+}
+
+.error-message {
+    color: #e74c3c;
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+    display: none;
+}
+
+.success-message {
+    color: #2ecc71;
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+    display: none;
+}
+
+.password-toggle {
+    position: absolute;
+    right: 15px;
+    top: 43px;
+    color: #7f8c8d;
+    cursor: pointer;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.login-form-container {
+    animation: fadeIn 0.5s ease-out;
+}
+
+/* Media queries */
+@media screen and (min-width: 768px) {
+    .login-image {
+        display: block;
+    }
+}

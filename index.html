@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Barrio Mando - La aplicación perfecta para gestionar barrios privados con eficiencia y seguridad.">
+    <title>Barrio Mando - Gestión Inteligente de Barrios Privados</title>
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Sección de Navegación -->
+    <header id="navbar">
+        <div class="logo-container">
+            <!-- Placeholder for the logo image you'll add later -->
+            <img src="./assets/img/barriogestionlogo.png" alt="Logo Barrio Mando" class="logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#caracteristicas">Características</a></li>
+                <li><a href="#clientes">Clientes</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="./login.html" class="login-btn"><i class="fas fa-user"></i> Login</a></li>
+                <li><a href="invitados.html">Administrar Invitados</a></li>
+                <li><a href="DatosClientes.html">Datos de Clientes</a></li>
+                <li><a href="mapa.html">Mapa del Barrio</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Sección principal de la landing page -->
+    <section id="inicio" class="hero">
+        <div class="hero-content">
+            <h1>Barrio Gestion</h1>
+            <p>La solución integral para la gestión eficiente de barrios privados</p>
+            <a href="#contacto" class="cta-btn">Solicitar una Demo</a>
+        </div>
+    </section>
+
+    <!-- Sección de características -->
+    <section id="caracteristicas">
+        <h2>Características de la App</h2>
+        <div class="features">
+            <div class="feature-item">
+                <h3>Control de Accesos</h3>
+                <p>Gestiona las entradas y salidas con registro digital de visitantes y notificaciones en tiempo real.</p>
+            </div>
+            <div class="feature-item">
+                <h3>Administración Comunitaria</h3>
+                <p>Facilita la gestión de expensas, reservas de espacios comunes y comunicación entre vecinos.</p>
+            </div>
+            <div class="feature-item">
+                <h3>Monitoreo de Seguridad</h3>
+                <p>Integra cámaras de vigilancia y alertas de seguridad en una plataforma centralizada.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de clientes -->
+    <section id="clientes">
+        <h2>Barrios que Confían en Nosotros</h2>
+        <p>Más de 50 barrios privados ya utilizan nuestra plataforma para mejorar su gestión diaria.</p>
+        
+        <!-- Carrusel de logos en lugar del mapa -->
+        <div class="logos-carousel">
+            <div class="logos-track">
+                <!-- Aquí debes colocar las imágenes de los logos de los barrios privados -->
+                <div class="logo-slide"><img src="./logos/barrio1.png" alt="Barrio 1"></div>
+                <div class="logo-slide"><img src="./logos/barrio2.png" alt="Barrio 2"></div>
+                <div class="logo-slide"><img src="./logos/barrio3.png" alt="Barrio 3"></div>
+                <div class="logo-slide"><img src="./logos/barrio4.png" alt="Barrio 4"></div>
+                <div class="logo-slide"><img src="./logos/barrio5.png" alt="Barrio 5"></div>
+                <div class="logo-slide"><img src="./logos/barrio6.png" alt="Barrio 6"></div>
+                <!-- Duplicar logos para crear efecto de carrusel infinito -->
+                <div class="logo-slide"><img src="./logos/barrio1.png" alt="Barrio 1"></div>
+                <div class="logo-slide"><img src="./logos/barrio2.png" alt="Barrio 2"></div>
+                <div class="logo-slide"><img src="./logos/barrio3.png" alt="Barrio 3"></div>
+                <div class="logo-slide"><img src="./logos/barrio4.png" alt="Barrio 4"></div>
+                <div class="logo-slide"><img src="./logos/barrio5.png" alt="Barrio 5"></div>
+                <div class="logo-slide"><img src="./logos/barrio6.png" alt="Barrio 6"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>&copy; 2025 Barrio Gestion. La plataforma de gestión para barrios privados. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- JavaScript para el menú fijo -->
+    <script>
+        // Obtener el elemento del menú de navegación
+        const navbar = document.getElementById('navbar');
+        // Guardar la posición original del menú
+        const sticky = navbar.offsetTop;
+
+        // Función para hacer el menú fijo cuando se desplaza la página
+        function makeNavbarSticky() {
+            if (window.pageYOffset > sticky) {
+                navbar.classList.add('sticky');
+            } else {
+                navbar.classList.remove('sticky');
+            }
+        }
+
+        // Ejecutar la función cuando se hace scroll
+        window.onscroll = function() {
+            makeNavbarSticky();
+        };
+    </script>
+</body>
+</html>
