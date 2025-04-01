@@ -10,40 +10,11 @@ body {
     color: #fff;
 }
 
-.Barrio {
-    font-family: 'Arial Black', sans-serif;
-    font-size: 5.5rem;
-    color: #ffffff;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-weight: 900;
-    text-align: center;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    border: none;
-    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
-    text-decoration: underline;
-    position: relative;
-    display: inline-block;
-}
-
-.Barrio::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 3px;
-    bottom: -5px;
-    left: 0;
-    background-color: #fff;
-    border-radius: 2px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
 /* TÃ­tulos y textos mejorados */
 h2 {
     font-family: 'Arial Black', sans-serif;
     color: #fff;
-    font-size: 3.5rem;
+    font-size: 2.1rem;
     margin: 30px auto;
     text-transform: uppercase;
     letter-spacing: 2px;
