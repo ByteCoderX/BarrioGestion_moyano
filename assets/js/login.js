@@ -1,4 +1,27 @@
 document.addEventListener('DOMContentLoaded', function() {
+    // Easter egg para el logo
+    const logoFlip = document.querySelector('.logo-flip');
+    if (logoFlip) {
+        logoFlip.addEventListener('click', function() {
+            this.classList.toggle('clicked');
+            if (this.classList.contains('clicked')) {
+                this.style.transform = 'rotateY(180deg)';
+                setTimeout(() => {
+                    this.style.transform = 'rotateY(0deg)';
+                    this.classList.remove('clicked');
+                }, 3000); // Vuelve a su posición original después de 3 segundos
+            }
+        });
+        
+        // Sonido sutil cuando se active el easter egg (opcional)
+        logoFlip.addEventListener('mouseenter', function() {
+            // Aquí podrías agregar un sonido sutil si lo deseas
+            // const audio = new Audio('ruta-a-tu-sonido.mp3');
+            // audio.volume = 0.2;
+            // audio.play();
+        });
+    }
+
     // Referencias a elementos del DOM
     const loginForm = document.getElementById('loginForm');
     const emailInput = document.getElementById('email');
