@@ -144,6 +144,13 @@
             color: var(--accent-color);
             margin-right: 1rem;
         }
+
+        .console-cursor {
+          display: inline-block;
+          font-weight: bold;
+          animation: blink 2s steps(1) infinite;
+          color: #1f4954;
+        }
         
         .feature-text h3 {
             font-size: 1rem;
@@ -184,6 +191,15 @@
             height: 20px;
             border-radius: 50%;
             margin-right: 0.5rem;
+        }
+
+        @keyframes blink {
+          0%, 50%, 100% {
+            opacity: 1;
+          }
+          25%, 75% {
+            opacity: 0;
+          }
         }
         
         .color-1 { background-color: #3498db; }
@@ -320,7 +336,7 @@
         
         <div class="map-container">
             <div class="map-header">
-                <h2>Puntos de Interés</h2>
+                <h2>Puntos de Interés <span class="console-cursor">|</span></h2>
             </div>
             <div class="map-features">
                 <div class="feature">
