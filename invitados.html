@@ -3,152 +3,348 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/css/invitados.css">
-    <title>Barrio Gestión • Administración de Invitados</title>
+    <link rel="stylesheet" href="styles.css">
+    <title>REGISTRO DE INVITADOS | BARRIO GESTION</title>
+    <link rel="icon" href="luxa.org-opacity-changed-._images-fotor-2025040719857.png" type="image/x-icon">
+
 </head>
-<style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Montserrat', sans-serif;
-        }
-
-        :root {
-            --primary-color: #2c3e50;
-            --accent-color: #3498db;
-            --light-color: #ecf0f1;
-            --dark-color: #2c3e50;
-            --success-color: #27ae60;
-        }
-
-        body {
-            background-color: #2c2c2c;
-            color: white;
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            text-align: center;
-            line-height: 1.6;
-        }
-
-        .navbar {
-            background-color: var(--primary-color);
-            padding: 1rem 2rem;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-        }
-        
-        .navbar-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        
-        .logo {
-            color: white;
-            font-size: 1.5rem;
-            font-weight: 700;
-            text-decoration: none;
-        }
-        
-        .nav-links {
-            display: flex;
-            list-style: none;
-        }
-        
-        .nav-links li {
-            margin-left: 1.5rem;
-        }
-        
-        .nav-links a {
-            color: white;
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.3s ease;
-        }
-        
-        .nav-links a:hover {
-            color: var(--accent-color);
-        }
-        
-        .active {
-            color: var(--accent-color) !important;
-        }
-
-        .main {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-            margin-top: 120px;
-        }
-</style>
 <body>
-    <nav class="navbar">
-        <div class="navbar-content">
-            <a href="index.html" class="logo">Barrio Gestión</a>
-            <ul class="nav-links">
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="" class="active">Administrar Invitados</a></li>
-                <li><a href="DatosClientes.html">Datos de Clientes</a></li>
-                <li><a href="mapa.html">Mapa</a></li>
-                <li><a href="login.html" style="color: #f1c40f;">Iniciar Sesión</a></li>
-            </ul>
-        </div>
-    </nav>
-
-    <div class="main">
-
-        <h2>ADMINISTRACIÓN DE INVITADOS</h2>
-
-        <p>Este apartado describe el sistema de control de acceso para los invitados del barrio privado. Se detallan los procedimientos para el registro, autorización y verificación de identidad, asegurando un ingreso seguro y controlado.</p>
-
-        <div class="form-container">
-            <form action="listaInvitados.html" method="get">
-                <label for="nombre">NOMBRE:</label>
-                <input type="text" id="nombre" name="nombre" required>
-
-                <label for="apellido">APELLIDO:</label>
-                <input type="text" id="apellido" name="apellido" required>
-
-                <label for="dni">DNI:</label>
-                <input type="text" id="dni" name="dni" required>
-
-                <label for="email">EMAIL:</label>
-                <input type="email" id="email" name="email" required>
-
-                <label for="horario">HORARIO:</label>
-                <input type="datetime-local" id="horario" name="horario" required>
-
-                <label for="foto">FOTO:</label>
-                <input type="file" id="foto" name="foto" accept="image/*">
-
-                <label for="placa">PLACA DEL VEHÍCULO:</label>
-                <input type="text" id="placa" name="placa">
-
-                <label for="motivo">MOTIVO:</label>
-                <select id="motivo" name="motivo">
-                    <option value="">-- Seleccionar --</option>
-                    <option value="personal">Personal</option>
+    <h1 class="Barrio">BARRIO GESTION</h1><BR><BR>
+    
+    <h2>REGISTRO DE INVITADOS</h2>
+    
+    <p>Este apartado describe el sistema de control de acceso para los invitados del barrio privado. Se detallan los procedimientos para el registro, autorización y verificación de identidad, asegurando un ingreso seguro y controlado.</p>
+    
+    <div class="form-container">
+        <form action="listaInvitados.html" method="get">
+            <label for="nombre">NOMBRE:</label>
+            <input type="text" id="nombre" name="nombre" title="Uyuyuyuyuy" required>
+            
+            <label for="apellido">APELLIDO:</label>
+            <input type="text" id="apellido" name="apellido" title="Estas Ahi nomas" required>
+            
+            <label for="dni">DNI:</label>
+            <input type="text" id="dni" name="dni" title="MMMMMMM" required>
+            
+            <label for="email">EMAIL:</label>
+            <input type="email" id="email" name="email" title="Es acá" required>
+            
+            <label for="horario">HORARIO:</label>
+            <input type="datetime-local" id="horario" name="horario" title="Estas cerquita" required>
+            
+            <label for="foto">FOTO:</label>
+            <input type="file" id="foto" name="foto" title="mmmmmm Nose" accept="image/*">
+            
+            <label for="placa">PLACA DEL VEHÍCULO:</label>
+            <input type="text" id="placa" name="placa" title="Acá no es">
+            
+            <label for="motivo">MOTIVO:</label>
+            <select id="motivo" name="motivo" title="Easter Egg #5
+- By: Juli">
+                <option value="fiesta">Fiesta</option>
                     <option value="trabajo">Trabajo</option>
                     <option value="evento">Evento</option>
-                    <option value="otro">Otro</option>
-                </select>
+                    <option value="boda">Boda</option>
+                    <option value="cumpleanos">Cumpleaños</option>
+                    <option value="reunion_social">Reunión social</option>
+                    <option value="visita_familiares">Visita familiares</option>
+                    <option value="mantenimiento">Mantenimiento</option>
+                    <option value="servicio_limpieza">Servicio de limpieza</option>
+                    <option value="mudanza">Mudanza</option>
+                    <option value="entrega_paquete">Entrega de paquete</option>
+                    <option value="visita_medica">Visita médica</option>
+                    <option value="cita">Cita</option>
+                    <option value="reparacion_vehiculo">Reparación de vehículo</option>
+                    <option value="reunion_negocios">Reunión de negocios</option>
+                    <option value="servicio_aseo">Servicio de aseo</option>
+                    <option value="consultorio">Consultorio</option>
+                    <option value="reunion_comunitaria">Reunión comunitaria</option>
+                    <option value="inspeccion_seguridad">Inspección de seguridad</option>
+                    <option value="reunion_escuela">Reunión escolar</option>
+                    <option value="encuentro_familia">Encuentro familiar</option>
+                    <option value="entrenamiento">Entrenamiento</option>
+                    <option value="curso">Curso</option>
+                    <option value="reunion_vecinos">Reunión de vecinos</option>
+                    <option value="comida">Comida</option>
+                    <option value="visita_amigos">Visita a amigos</option>
+                    <option value="apoyo_socio">Apoyo social</option>
+                    <option value="celebracion">Celebración</option>
+                    <option value="consultoria">Consultoría</option>
+                    <option value="trabajo_externo">Trabajo externo</option>
+                    <option value="asesoria">Asesoría</option>
+                    <option value="conferencia">Conferencia</option>
+                    <option value="taller">Taller</option>
+                    <option value="reunion_grupo">Reunión de grupo</option>
+                    <option value="trabajo_remoto">Trabajo remoto</option>
+                    <option value="consultoria_negocios">Consultoría de negocios</option>
+                    <option value="rehabilitacion">Rehabilitación</option>
+                    <option value="evento_cultural">Evento cultural</option>
+                    <option value="viaje_negocios">Viaje de negocios</option>
+                    <option value="visita_proveedor">Visita de proveedor</option>
+                    <option value="inscripcion">Inscripción</option>
+                    <option value="cita_comercial">Cita comercial</option>
+                    <option value="compra_venta">Compra y venta</option>
+                    <option value="voluntariado">Voluntariado</option>
+                    <option value="fiesta_privada">Fiesta privada</option>
+                    <option value="servicio_mantenimiento">Servicio de mantenimiento</option>
+                    <option value="reunion_administracion">Reunión administrativa</option>
+                    <option value="reparacion_tecnica">Reparación técnica</option>
+                    <option value="actividad_recreativa">Actividad recreativa</option>
+                    <option value="supervision_obras">Supervisión de obras</option>
+                    <option value="formacion_profesional">Formación profesional</option>
+                    <option value="reunion_trabajo">Reunión de trabajo</option>
+                    <option value="evento_externo">Evento externo</option>
+                    <option value="atencion_cliente">Atención al cliente</option>
+                    <option value="encuentro_amigos">Encuentro con amigos</option>
+                    <option value="reunion_proyecto">Reunión de proyecto</option>
+                    <option value="actos_religiosos">Actos religiosos</option>
+                    <option value="celebracion_organizacion">Celebración de organización</option>
+                    <option value="eventos_exclusivos">Eventos exclusivos</option>
+                    <option value="visita_laboral">Visita laboral</option>
+                    <option value="mantenimiento_jardines">Mantenimiento de jardines</option>
+                    <option value="servicio_urgente">Servicio urgente</option>
+                    <option value="inspeccion_fotografica">Inspección fotográfica</option>
+                    <option value="exhibicion">Exhibición</option>
+                    <option value="analisis_sistemas">Análisis de sistemas</option>
+                    <option value="prueba_tecnica">Prueba técnica</option>
+                    <option value="proyecto_sostenibilidad">Proyecto de sostenibilidad</option>
+                    <option value="proceso_legal">Proceso legal</option>
+                    <option value="rescate">Rescate</option>
+                    <option value="actividad_deportiva">Actividad deportiva</option>
+                    <option value="formacion_interna">Formación interna</option>
+                    <option value="cita_sustitucion">Cita de sustitución</option>
+                    <option value="servicio_externo">Servicio externo</option>
+                    <option value="instalacion_venta">Instalación de venta</option>
+                    <option value="consulta_tecnica">Consulta técnica</option>
+                    <option value="vigilancia">Vigilancia</option>
+                    <option value="control_acceso">Control de acceso</option>
+                    <option value="reunion_urgente">Reunión urgente</option>
+                    <option value="trámite_administrativo">Trámite administrativo</option>
+                    <option value="visita_inmobiliaria">Visita inmobiliaria</option>
+                    <option value="reunion_gobierno">Reunión gubernamental</option>
+                    <option value="formacion_equipo">Formación de equipo</option>
+                    <option value="comunicacion">Comunicación</option>
+                    <option value="pruebas_estrategicas">Pruebas estratégicas</option>
+                    <option value="encuentro_expedicion">Encuentro expedición</option>
+                    <option value="fiesta_fin_de_semana">Fiesta de fin de semana</option>
+                    <option value="entrenamiento_ejecutivo">Entrenamiento ejecutivo</option>
+                    <option value="cita_presencial">Cita presencial</option>
+                    <option value="asesoria_externa">Asesoría externa</option>
+                    <option value="instalacion_comercial">Instalación comercial</option>
+                    <option value="evento_patrocinado">Evento patrocinado</option>
+                    <option value="estudio_profesional">Estudio profesional</option>
+                    <option value="prueba_servicios">Prueba de servicios</option>
+                    <option value="formacion_academica">Formación académica</option>
+                    <option value="cita_inmobiliaria">Cita inmobiliaria</option>
+                    <option value="reunion_analisis">Reunión de análisis</option>
+                    <option value="asesoria_tecnica">Asesoría técnica</option>
+                    <option value="verificacion_proyecto">Verificación de proyecto</option>
+                    <option value="actividad_familiar">Actividad familiar</option>
+                    <option value="reparacion_equipos">Reparación de equipos</option>
+                    <option value="servicio_seguimiento">Servicio de seguimiento</option>
+                    <option value="reunion_educativa">Reunión educativa</option>
+                    <option value="intervencion_urgente">Intervención urgente</option>
+                    <option value="atencion_solicitudes">Atención de solicitudes</option>
+                    <option value="entrenamiento_liderazgo">Entrenamiento de liderazgo</option>
+                    <option value="asesoria_legal">Asesoría legal</option>
+                    <option value="reunion_oficial">Reunión oficial</option>
+                    <option value="actividades_deportivo_socio">Actividades deportivas para socios</option>
+                    <option value="reuniones_relacionadas">Reuniones relacionadas</option>
+                    <option value="celebraciones_religiosas">Celebraciones religiosas</option>
+                    <option value="verificacion_tecnica">Verificación técnica</option>
+                    <option value="solucion_conflictos">Solución de conflictos</option>
+                    <option value="reunion_habitacional">Reunión habitacional</option>
+                    <option value="proyecto_futuro">Proyecto futuro</option>
+                    <option value="planificacion_estrategica">Planificación estratégica</option>
+                    <option value="tarea_comercial">Tarea comercial</option>
+                    <option value="actividad_fiestas">Actividad de fiestas</option>
+                    <option value="reunion_integracion">Reunión de integración</option>
+                    <option value="formacion_administrativa">Formación administrativa</option>
+                    <option value="eventos_familiares">Eventos familiares</option>
+                    <option value="asesoria_financiera">Asesoría financiera</option>
+                    <option value="cursos_externos">Cursos externos</option>
+                    <option value="planificacion_proyectos">Planificación de proyectos</option>
+                    <option value="entrevista_comercial">Entrevista comercial</option>
+                    <option value="salon_reuniones">Salón de reuniones</option>
+                    <option value="comunicacion_comercial">Comunicación comercial</option>
+                    <option value="servicio_cliente">Servicio al cliente</option>
+                    <option value="apoyo_emergencia">Apoyo en emergencia</option>
+                    <option value="consulta_informativa">Consulta informativa</option>
+                    <option value="inscripcion_examen">Inscripción a examen</option>
+                    <option value="reunion_asistencia">Reunión de asistencia</option>
+                    <option value="evaluacion_tecnica">Evaluación técnica</option>
+                    <option value="reunion_empresarial">Reunión empresarial</option>
+                    <option value="prueba_producto">Prueba de producto</option>
+                    <option value="trabajo_individual">Trabajo individual</option>
+                    <option value="reunion_externa">Reunión externa</option>
+                    <option value="evaluacion_estrategica">Evaluación estratégica</option>
+                    <option value="reunion_club">Reunión en el club</option>
+                    <option value="programa_familiar">Programa familiar</option>
+                    <option value="verificacion_requerimientos">Verificación de requerimientos</option>
+                    <option value="cambio_ubicacion">Cambio de ubicación</option>
+                    <option value="encuentro_consejo">Encuentro con consejo</option>
+                    <option value="reunion_seguridad">Reunión de seguridad</option>
+                    <option value="charla_informativa">Charla informativa</option>
+                    <option value="auditoria">Auditoría</option>
+                    <option value="control_calidad">Control de calidad</option>
+                    <option value="gestion_emergencia">Gestión de emergencia</option>
+                    <option value="consultoria_legal">Consultoría legal</option>
+                    <option value="evento_corporativo">Evento corporativo</option>
+                    <option value="mantenimiento_urbano">Mantenimiento urbano</option>
+                    <option value="formacion_interna">Formación interna</option>
+                    <option value="entrevista_entrevista">Entrevista laboral</option>
+                    <option value="gestion_proyecto">Gestión de proyecto</option>
+                    <option value="informacion_servicios">Información sobre servicios</option>
+                    <option value="eventos_barrio">Eventos del barrio</option>
+                    <option value="reunion_de_empresa">Reunión de empresa</option>
+                    <option value="verificacion_ambiental">Verificación ambiental</option>
+                    <option value="proyectos_sostenibilidad">Proyectos de sostenibilidad</option>
+                    <option value="reunion_area_comercial">Reunión área comercial</option>
+                    <option value="tarea_asistencia">Tarea de asistencia</option>
+                    <option value="atencion_personalizada">Atención personalizada</option>
+                    <option value="evaluacion_riesgos">Evaluación de riesgos</option>
+                    <option value="plan_accion">Plan de acción</option>
+                    <option value="asesoria_comercial">Asesoría comercial</option>
+                    <option value="plan_mejoras">Plan de mejoras</option>
+                    <option value="consultoria_organizacion">Consultoría de organización</option>
+                    <option value="investigacion_mercado">Investigación de mercado</option>
+                    <option value="prueba_examen">Prueba de examen</option>
+                    <option value="servicios_barrio">Servicios del barrio</option>
+                    <option value="consulta_medica">Consulta médica</option>
+                    <option value="servicio_transporte">Servicio de transporte</option>
+                    <option value="reunion_sindical">Reunión sindical</option>
+                    <option value="reparacion_domestica">Reparación doméstica</option>
+                    <option value="trabajo_remoto">Trabajo remoto</option>
+                    <option value="celebracion_cumpleanos">Celebración de cumpleaños</option>
+                    <option value="charla_educativa">Charla educativa</option>
+                    <option value="encuentro_musical">Encuentro musical</option>
+                    <option value="intervencion_psicologica">Intervención psicológica</option>
+                    <option value="reunion_familiar">Reunión familiar</option>
+                    <option value="proyecto_investigacion">Proyecto de investigación</option>
+                    <option value="consulta_psicologica">Consulta psicológica</option>
+                    <option value="examen_laboral">Examen laboral</option>
+                    <option value="reunion_servicios">Reunión sobre servicios</option>
+                    <option value="entrenamiento_mental">Entrenamiento mental</option>
+                    <option value="proyecto_educativo">Proyecto educativo</option>
+                    <option value="desayuno_trabajo">Desayuno de trabajo</option>
+                    <option value="reunion_especialistas">Reunión de especialistas</option>
+                    <option value="encuentro_artistas">Encuentro de artistas</option>
+                    <option value="encuentro_deporte">Encuentro deportivo</option>
+                    <option value="tarea_administrativa">Tarea administrativa</option>
+                    <option value="reparacion_computadoras">Reparación de computadoras</option>
+                    <option value="formacion_sistemas">Formación en sistemas</option>
+                    <option value="consulta_gestion">Consulta de gestión</option>
+                    <option value="asistencia_evento">Asistencia a evento</option>
+                    <option value="tarea_organizacion">Tarea de organización</option>
+                    <option value="reunion_planning">Reunión de planificación</option>
+                    <option value="servicio_seguimiento">Servicio de seguimiento</option>
+                    <option value="asesoria_externa">Asesoría externa</option>
+                    <option value="actividades_culturales">Actividades culturales</option>
+                    <option value="consulta_direccion">Consulta de dirección</option>
+                    <option value="formacion_comercial">Formación comercial</option>
+                    <option value="cita_legal">Cita legal</option>
+                    <option value="coordinacion_eventos">Coordinación de eventos</option>
+                    <option value="supervision_servicios">Supervisión de servicios</option>
+                    <option value="proceso_comercial">Proceso comercial</option>
+                    <option value="cita_psicoterapeutica">Cita psicoterapéutica</option>
+                    <option value="apoyo_familiar">Apoyo familiar</option>
+                    <option value="proyecto_creativo">Proyecto creativo</option>
+                    <option value="tarea_cercania">Tarea de cercanía</option>
+                    <option value="asistencia_emergencia">Asistencia de emergencia</option>
+                    <option value="visita_inmueble">Visita a inmueble</option>
+                    <option value="reunion_multinacional">Reunión multinacional</option>
+                    <option value="entrenamiento_grupal">Entrenamiento grupal</option>
+                    <option value="conferencia_educativa">Conferencia educativa</option>
+                    <option value="cita_medica">Cita médica</option>
+                    <option value="tarea_mantenimiento">Tarea de mantenimiento</option>
+                    <option value="asesoria_negocios">Asesoría de negocios</option>
+                    <option value="solicitud_formulario">Solicitud de formulario</option>
+                    <option value="consulta_farmaceutica">Consulta farmacéutica</option>
+                    <option value="mantenimiento_imagen">Mantenimiento de imagen</option>
+                    <option value="reunion_estrategia">Reunión estratégica</option>
+                    <option value="prueba_tarea">Prueba de tarea</option>
+                    <option value="proyecto_arquitectura">Proyecto arquitectónico</option>
+                    <option value="inspeccion_riesgos">Inspección de riesgos</option>
+                    <option value="tarea_urgente">Tarea urgente</option>
+                    <option value="consultoria_fiscal">Consultoría fiscal</option>
+                    <option value="planificacion_rural">Planificación rural</option>
+                    <option value="reunion_turismo">Reunión de turismo</option>
+                    <option value="formacion_manejo">Formación en manejo</option>
+                    <option value="formacion_inmobiliaria">Formación inmobiliaria</option>
+                    <option value="consulta_proyecto">Consulta de proyecto</option>
+                    <option value="consulta_proyecto">Jugar a la pelota</option>
+                    <option value="asistencia_legal">Asistencia legal</option>
+                    <option value="actividad_recreativa">Actividad recreativa</option>
+                    <option value="reparacion_automovil">Reparación de automóvil</option>
+                    <option value="reunion_estrategica">Reunión estratégica</option>
+                    <option value="servicio_turismo">Servicio de turismo</option>
+                    <option value="tarea_juridica">Tarea jurídica</option>
+                    <option value="encuentro_familiares">Encuentro familiares</option>
+                    <option value="conferencia_legal">Conferencia legal</option>
+                    <option value="planificacion_hotelera">Planificación hotelera</option>
+                    <option value="asesoria_fiscal">Asesoría fiscal</option>
+                    <option value="evento_internacional">Evento internacional</option>
+                    <option value="formacion_tecnica">Formación técnica</option>
+                    <option value="consulta_inmobiliaria">Consulta inmobiliaria</option>
+                    <option value="reunion_turistica">Reunión turística</option>
+                    <option value="tarea_mercadeo">Tarea de mercadeo</option>
+                    <option value="auditoria_interna">Auditoría interna</option>
+                    <option value="despacho_juridico">Despacho jurídico</option>
+                    <option value="asesoria_inmobiliaria">Asesoría inmobiliaria</option>
+                    <option value="gestion_hotelera">Gestión hotelera</option>
+                    <option value="proceso_ambiental">Proceso ambiental</option>
+                    <option value="inspeccion_tecnica">Inspección técnica</option>
+                    <option value="asesoria_juridica">Asesoría jurídica</option>
+                    <option value="tarea_comercial">Tarea comercial</option>
+                    <option value="planificacion_proyecto">Planificación de proyecto</option>
+                    <option value="encuentro_empresarial">Encuentro empresarial</option>
+                    <option value="reunion_organizacion">Reunión organizacional</option>
+                    <option value="consultoria_industrial">Consultoría industrial</option>
+                    <option value="proceso_hotelero">Proceso hotelero</option>
+                    <option value="cita_medica">Cita médica</option>
+                    <option value="formacion_negocios">Formación de negocios</option>
+                    <option value="consultoria_externa">Consultoría externa</option>
+                    <option value="proyecto_ambiental">Proyecto ambiental</option>
+                    <option value="entrenamiento_equipos">Entrenamiento de equipos de voley</option>
+                    <option value="evento_deportivo">Evento deportivo</option>
+                    <option value="proceso_comercial">Proceso comercial</option>
+                    <option value="encuentro_profesional">Encuentro profesional</option>
+                    <option value="planificacion_servicios">Planificación de servicios</option>
+                    <option value="auditoria_fiscal">Auditoría fiscal</option>
+                    <option value="tarea_reparacion">Tarea de reparación</option>
+                    <option value="asesoria_empresarial">Asesoría empresarial</option>
+            </select>
+            <label for="dueno" id="duenoLabel">DUEÑO DE LA CASA:</label>
+            <input type="text" id="dueno" name="dueno" title="Lejisimos" required>
 
-                <label for="dueno">DUEÑO DE LA CASA:</label>
-                <input type="text" id="dueno" name="dueno" required>
-
-                <label for="lote">NRO DE LOTE:</label>
-                <input type="text" id="lote" name="lote" required>
-
-                <button type="submit">REGISTRAR INVITADO</button>
-            </form>
-        </div>
+            <label for="lote">NRO DE LOTE:</label>
+            <input type="text" id="lote" name="lote" title="LO ENCONTRASTE" required>
+            
+            <button type="submit">REGISTRAR INVITADO</button>
+        </form>
     </div>
+
 </body>
+<script>
+    // Obtén el elemento del label
+    const label = document.getElementById('duenoLabel');
+
+    // Añade el evento 'mouseenter' al label
+    label.addEventListener('mouseenter', function() {
+        // Genera un número aleatorio entre 1 y 2
+        const random = Math.floor(Math.random() * 5) + 1;
+
+        // Si el valor es 1, cambia el color a amarillo; si es 2, cambia el color a verde
+        if (random === 1) {
+            label.style.color = 'yellow';
+        } else {
+            label.style.color = 'green';
+        }
+    });
+
+    // Vuelve a su color original cuando el cursor sale
+    label.addEventListener('mouseleave', function() {
+        label.style.color = ''; // Restablece el color original
+    });
+</script>
 </html>
